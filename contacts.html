@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты и запись на занятия — МБОУ СОШ №11</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .news-ticker {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .news-ticker__track {
+        display: inline-block;
+        padding-left: 100%;
+        animation: ticker-move 18s linear infinite;
+      }
+
+      @keyframes ticker-move {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="site-header">
+      <div class="container header__inner">
+        <div class="header__logo-wrap">
+          <img src="logo.png" alt="Логотип МБОУ СОШ №11" class="header__logo" />
+        </div>
+        <div class="header__text">
+          <h1 class="header__title">МБОУ СОШ №11</h1>
+          <p class="header__subtitle">Основана в 1987 году. Традиции, знания, развитие.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="site-nav" aria-label="Главное меню">
+      <div class="container">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="about.html">О школе</a></li>
+          <li class="nav__item"><a class="nav__link" href="sections.html">Спортивные секции</a></li>
+          <li class="nav__item"><a class="nav__link" href="teachers.html">Педагоги</a></li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="contacts.html" aria-current="page">Контакты/Запись</a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="admin.html">Администратор</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="site-main">
+      <!-- Hero -->
+      <section
+        class="hero hero--compact"
+        style="background-image: url('school_building.jpg');"
+      >
+        <div class="container hero__content">
+          <h1 class="hero__title">Контакты и запись на занятия</h1>
+          <p class="hero__subtitle">Свяжитесь с нами или запишитесь на подготовку</p>
+        </div>
+      </section>
+
+      <!-- Контакты и форма: две колонки -->
+      <section class="contacts-page" aria-labelledby="contacts-layout-heading">
+        <h2 id="contacts-layout-heading" class="visually-hidden">Контактные данные и форма записи</h2>
+        <div class="container contacts-grid">
+          <!-- Левая колонка: контакты и карта -->
+          <div class="contact-info">
+            <h2 class="contacts-page__block-title">Контактная информация</h2>
+            <address class="contacts-address">
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📍</span>
+                <span
+                  ><strong>Адрес:</strong> г. Белгород, ул. Пушкина 49 &laquo;А&raquo;, 3-й этаж, офис
+                  310</span
+                >
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📞</span>
+                <span
+                  ><strong>Телефон:</strong>
+                  <a id="contactPhoneLink" href="tel:+74722235510">7-(4722)-23-55-10</a></span
+                >
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">✉</span>
+                <span
+                  ><strong>Email:</strong>
+                  <a href="mailto:school11@beluo31.ru">school11@beluo31.ru</a></span
+                >
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">🕐</span>
+                <span
+                  ><strong>Часы работы:</strong> Пн&ndash;Пт 09:00&ndash;18:00, Сб 09:00&ndash;14:00</span
+                >
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">👤</span>
+                <span><strong>Директор:</strong> Махова Ольга Валерьевна</span>
+              </div>
+            </address>
+            <!-- Карта (виджет Яндекс.Карт; при необходимости замените src на свой) -->
+            <div class="contacts-map-wrap">
+              <iframe
+                title="Карта: г. Белгород"
+                src="https://yandex.ru/map-widget/v1/?ll=36.587223%2C50.595414&amp;z=16"
+                width="100%"
+                height="280"
+                style="border: 0; border-radius: 12px"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <p class="contacts-map-note">
+                Если карта не загрузилась, откройте адрес в
+                <a href="https://yandex.ru/maps/" target="_blank" rel="noopener noreferrer">Яндекс.Картах</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Правая колонка: таймер и форма -->
+          <div class="contacts-column contacts-column--form">
+            <!-- Таймер до Дня открытых дверей -->
+            <div class="timer countdown-block" aria-live="polite">
+              <p class="timer__label countdown-block__label">До Дня открытых дверей осталось:</p>
+              <div class="timer-numbers countdown-block__values" id="countdownDisplay">
+                <div class="timer-box">
+                  <span id="days">0</span>
+                  <span class="timer-box__unit">дн.</span>
+                </div>
+                <div class="timer-box">
+                  <span id="hours">0</span>
+                  <span class="timer-box__unit">ч.</span>
+                </div>
+                <div class="timer-box">
+                  <span id="minutes">0</span>
+                  <span class="timer-box__unit">мин.</span>
+                </div>
+                <div class="timer-box">
+                  <span id="seconds">0</span>
+                  <span class="timer-box__unit">сек.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Форма записи (без отправки на сервер, обработка в script.js) -->
+            <h2 class="contacts-page__block-title">Запись на подготовительные занятия</h2>
+            <form id="registrationForm" class="contact-form contacts-form" novalidate>
+              <div class="form-group contacts-form__field">
+                <label for="studentName">Ваше ФИО</label>
+                <input type="text" id="studentName" name="studentName" autocomplete="name" />
+              </div>
+              <div class="form-group contacts-form__field">
+                <label for="studentClass">Класс</label>
+                <input
+                  type="text"
+                  id="studentClass"
+                  name="studentClass"
+                  placeholder="Например, 11А"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-group contacts-form__field">
+                <label for="studentPhone">Телефон для связи</label>
+                <input type="tel" id="studentPhone" name="studentPhone" autocomplete="tel" />
+              </div>
+
+              <fieldset class="contacts-form__fieldset">
+                <legend>Выберите направление(я)</legend>
+                <ul class="checkbox-group contacts-form__checks">
+                  <li>
+                    <input type="checkbox" id="math" name="subject" value="math" />
+                    <label for="math">Математика</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="russian" name="subject" value="russian" />
+                    <label for="russian">Русский язык</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="informatics" name="subject" value="informatics" />
+                    <label for="informatics">Информатика</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="history" name="subject" value="history" />
+                    <label for="history">История</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="biology" name="subject" value="biology" />
+                    <label for="biology">Биология</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="english" name="subject" value="english" />
+                    <label for="english">Английский язык</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="physics" name="subject" value="physics" />
+                    <label for="physics">Физика</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="chemistry" name="subject" value="chemistry" />
+                    <label for="chemistry">Химия</label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="contacts-form__fieldset">
+                <legend>Выберите тип занятий</legend>
+                <ul class="radio-group contacts-form__radios">
+                  <li>
+                    <input type="radio" id="ege" name="lessonType" value="ege" />
+                    <label for="ege">ЕГЭ</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="oge" name="lessonType" value="oge" />
+                    <label for="oge">ОГЭ</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="repetitor" name="lessonType" value="repetitor" />
+                    <label for="repetitor">Репетиторство</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="olympiad" name="lessonType" value="olympiad" />
+                    <label for="olympiad">Олимпиады</label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <div class="form-group contacts-form__field">
+                <label for="preferredTime">Удобное время занятий</label>
+                <select id="preferredTime" name="preferredTime">
+                  <option value="">Выберите вариант</option>
+                  <option value="weekday-morning">Будни, до 14:00</option>
+                  <option value="weekday-afternoon">Будни, после 14:00</option>
+                  <option value="saturday">Суббота</option>
+                  <option value="flex">Согласовать с администратором</option>
+                </select>
+              </div>
+
+              <p id="formMessage" class="contacts-form__message" role="status" aria-live="polite"></p>
+
+              <div class="contacts-form__actions">
+                <button type="submit" class="btn submit-btn contacts-form__btn-submit">
+                  Отправить заявку
+                </button>
+                <button type="button" class="btn clear-btn contacts-form__btn-clear">
+                  Очистить форму
+                </button>
+                <button type="button" class="btn btn-back-home contacts-form__btn-home">
+                  Вернуться на главную
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Направления школы -->
+      <section class="contacts-directions" aria-labelledby="directions-heading">
+        <div class="container">
+          <h2 id="directions-heading" class="section-title">Направления в школе</h2>
+          <div class="directions-grid">
+            <article class="direction-card">
+              <h3 class="direction-card__title">Естественно-научный профиль</h3>
+              <p class="direction-card__text">Математика, физика, химия, биология, информатика.</p>
+            </article>
+            <article class="direction-card">
+              <h3 class="direction-card__title">Гуманитарный профиль</h3>
+              <p class="direction-card__text">Русский язык, литература, история, обществознание, языки.</p>
+            </article>
+            <article class="direction-card">
+              <h3 class="direction-card__title">Кадетские классы МЧС</h3>
+              <p class="direction-card__text">Патриотическое воспитание и подготовка к выбору профессии.</p>
+            </article>
+            <article class="direction-card">
+              <h3 class="direction-card__title">Спорт и творчество</h3>
+              <p class="direction-card__text">Секции, спартакиады, кружки и внеурочная деятельность.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <address class="footer__contacts">
+          <p class="footer__contact-item">Адрес: г. Белгород, ул. Школьная, д. 11</p>
+          <p class="footer__contact-item">Телефон: +7 (4722) 00-00-00</p>
+          <p class="footer__contact-item">
+            Email: <a href="mailto:school11@beluo31.ru">school11@beluo31.ru</a>
+          </p>
+        </address>
+        <p class="footer__copyright">© МБОУ СОШ №11, 2026. Все права защищены.</p>
+      </div>
+
+      <!-- Бегущая строка -->
+      <div class="news-ticker" aria-label="Новости и объявления">
+        <p class="news-ticker__track">
+          Объявление: идет набор в профильные классы на 2026-2027 учебный год • Новости: открыта запись
+          на консультации с педагогами • Важно: актуальное расписание размещено в разделе «Контакты/Запись»
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

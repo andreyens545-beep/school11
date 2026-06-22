@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет администратора — МБОУ СОШ №11</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .news-ticker { overflow: hidden; white-space: nowrap; }
+      .news-ticker__track {
+        display: inline-block;
+        padding-left: 100%;
+        animation: ticker-move 18s linear infinite;
+      }
+      @keyframes ticker-move {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__inner">
+        <div class="header__logo-wrap">
+          <img src="logo.png" alt="Логотип МБОУ СОШ №11" class="header__logo" />
+        </div>
+        <div class="header__text">
+          <h1 class="header__title">МБОУ СОШ №11</h1>
+          <p class="header__subtitle">Основана в 1987 году. Традиции, знания, развитие.</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Главное меню">
+      <div class="container">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="about.html">О школе</a></li>
+          <li class="nav__item"><a class="nav__link" href="sections.html">Спортивные секции</a></li>
+          <li class="nav__item"><a class="nav__link" href="teachers.html">Педагоги</a></li>
+          <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты/Запись</a></li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="admin.html" aria-current="page">Администратор</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="site-main">
+      <section class="admin-page" aria-labelledby="admin-heading">
+        <div class="container">
+          <h1 id="admin-heading" class="section-title">Личный кабинет администратора</h1>
+          <p class="admin-page__desc">Управление заявками на спортивные секции и консультации к педагогам</p>
+
+          <div class="admin-filters" role="group" aria-label="Фильтр заявок">
+            <button type="button" class="btn admin-filter admin-filter--active" data-filter="all">Все</button>
+            <button type="button" class="btn admin-filter" data-filter="section">Секции</button>
+            <button type="button" class="btn admin-filter" data-filter="teacher">Педагоги</button>
+          </div>
+
+          <div class="admin-actions">
+            <button type="button" class="btn admin-btn-clear" id="clearAllApplications">Очистить все заявки</button>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-table" id="applicationsTable">
+              <thead>
+                <tr>
+                  <th scope="col">№</th>
+                  <th scope="col">Тип заявки</th>
+                  <th scope="col">ФИО</th>
+                  <th scope="col">Телефон</th>
+                  <th scope="col">Направление</th>
+                  <th scope="col">Дата записи</th>
+                  <th scope="col">Действия</th>
+                </tr>
+              </thead>
+              <tbody id="applicationsTableBody">
+                <!-- Заполняется через script.js -->
+              </tbody>
+            </table>
+            <p class="admin-empty" id="adminEmpty">Заявок пока нет</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <address class="footer__contacts">
+          <p class="footer__contact-item">Адрес: г. Белгород, ул. Школьная, д. 11</p>
+          <p class="footer__contact-item">Телефон: +7 (4722) 00-00-00</p>
+          <p class="footer__contact-item">Email: <a href="mailto:school11@beluo31.ru">school11@beluo31.ru</a></p>
+        </address>
+        <p class="footer__copyright">© МБОУ СОШ №11, 2026. Все права защищены.</p>
+      </div>
+      <div class="news-ticker" aria-label="Новости и объявления">
+        <p class="news-ticker__track">
+          Объявление: идет набор в спортивные секции на 2026-2027 учебный год • Новости: открыта запись
+          на консультации с педагогами • Важно: актуальное расписание размещено в разделе «Контакты/Запись»
+        </p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+  </body>
+</html>

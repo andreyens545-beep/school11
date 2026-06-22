@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>МБОУ СОШ №11</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .news-ticker {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .news-ticker__track {
+        display: inline-block;
+        padding-left: 100%;
+        animation: ticker-move 18s linear infinite;
+      }
+
+      @keyframes ticker-move {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="site-header">
+      <div class="container header__inner">
+        <div class="header__logo-wrap">
+          <img src="logo.png" alt="Логотип МБОУ СОШ №11" class="header__logo" />
+        </div>
+        <div class="header__text">
+          <h1 class="header__title">МБОУ СОШ №11</h1>
+          <p class="header__subtitle">Основана в 1987 году. Традиции, знания, развитие.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Навигация (активный пункт: текущая страница) -->
+    <nav class="site-nav" aria-label="Главное меню">
+      <div class="container">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="index.html" aria-current="page">Главная</a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="about.html">О школе</a></li>
+          <li class="nav__item"><a class="nav__link" href="sections.html">Спортивные секции</a></li>
+          <li class="nav__item"><a class="nav__link" href="teachers.html">Педагоги</a></li>
+          <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты/Запись</a></li>
+          <li class="nav__item"><a class="nav__link" href="admin.html">Администратор</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="site-main">
+      <!-- Главный баннер -->
+      <section
+        class="hero"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('school_building.jpg');"
+      >
+        <div class="container hero__content">
+          <h2 class="hero__title">Школьный спортивно-образовательный портал</h2>
+          <p class="hero__subtitle">Онлайн-запись на спортивные секции и дополнительные занятия по физической культуре</p>
+          <a href="sections.html" class="btn btn--hero">Записаться в секцию</a>
+        </div>
+      </section>
+
+      <!-- Приветствие директора -->
+      <section class="director-greeting">
+        <div class="container director-greeting__inner">
+          <div class="director-greeting__photo-wrap">
+            <img
+              src="director.jpg"
+              alt="Директор школы Махова Ольга Валерьевна"
+              class="director-greeting__photo"
+            />
+          </div>
+          <div class="director-greeting__content">
+            <h2 class="section-title">Приветствие директора</h2>
+            <p class="director-greeting__text">
+              Добро пожаловать на наш сайт! На его страницах мы постарались разместить
+              материалы, которые помогут быть Вам в курсе последних событий, узнать, как мы
+              живем и чем гордимся. Педагоги нашей школы стараются сохранить в своих учениках
+              индивидуальность, воспитать их образованными, уверенными в себе людьми...
+            </p>
+            <p class="director-greeting__signature">
+              С уважением, директор Махова Ольга Валерьевна
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок статистики с анимацией счётчиков -->
+      <section class="stats stats--animated" id="homeStats">
+        <div class="container">
+          <h2 class="section-title">Статистика</h2>
+          <div class="stats__grid stats__grid--4">
+            <article class="stats-card" data-count="6">
+              <p class="stats-card__value">0</p>
+              <p class="stats-card__label">Спортивных секций</p>
+            </article>
+            <article class="stats-card" data-count="8">
+              <p class="stats-card__value">0</p>
+              <p class="stats-card__label">Педагогов</p>
+            </article>
+            <article class="stats-card" data-count="1050">
+              <p class="stats-card__value">0</p>
+              <p class="stats-card__label">Учащихся</p>
+            </article>
+            <article class="stats-card" data-count="47">
+              <p class="stats-card__value">0</p>
+              <p class="stats-card__label">Спортивных достижений</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- О школе в цифрах -->
+      <section class="school-facts">
+        <div class="container">
+          <h2 class="section-title">О школе в цифрах</h2>
+          <ul class="school-facts__list">
+            <li class="school-facts__item">
+              В школе обучается 1050 человек за счет бюджетных ассигнований.
+            </li>
+            <li class="school-facts__item">
+              Функционируют 3 класса универсального профиля с углубленным изучением математики.
+            </li>
+            <li class="school-facts__item">Средняя наполняемость классов составляет 27 человек.</li>
+            <li class="school-facts__item">
+              Выпускники поступают в ВУЗы Москвы, Санкт-Петербурга, Воронежа, Курска, Белгорода.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Материально-техническое обеспечение -->
+      <section class="infrastructure">
+        <div class="container">
+          <h2 class="section-title">Материально-техническое обеспечение</h2>
+          <ul class="infrastructure__list">
+            <li class="infrastructure__item">Столовая на 168 посадочных мест.</li>
+            <li class="infrastructure__item">
+              В 2022 году проведен капитальный ремонт пищеблока.
+            </li>
+            <li class="infrastructure__item">Организацию питания осуществляет комбинат питания ЖБК-1.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Табличная вёрстка: режим работы школы -->
+      <section class="schedule-section" aria-labelledby="schedule-heading">
+        <div class="container">
+          <h2 id="schedule-heading" class="section-title">Режим работы администрации</h2>
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th scope="col">Дни</th>
+                <th scope="col">Время приёма</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Понедельник — пятница</td>
+                <td>09:00 — 18:00</td>
+              </tr>
+              <tr>
+                <td>Суббота</td>
+                <td>09:00 — 14:00</td>
+              </tr>
+              <tr>
+                <td>Воскресенье</td>
+                <td>Выходной</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <address class="footer__contacts">
+          <p class="footer__contact-item">Адрес: г. Белгород, ул. Школьная, д. 11</p>
+          <p class="footer__contact-item">Телефон: +7 (4722) 00-00-00</p>
+          <p class="footer__contact-item">
+            Email: <a href="mailto:school11@beluo31.ru">school11@beluo31.ru</a>
+          </p>
+        </address>
+        <p class="footer__copyright">© МБОУ СОШ №11, 2026. Все права защищены.</p>
+      </div>
+
+      <!-- Бегущая строка -->
+      <div class="news-ticker" aria-label="Новости и объявления">
+        <p class="news-ticker__track">
+          Объявление: идет набор в профильные классы на 2026-2027 учебный год • Новости: открыта
+          запись на консультации с педагогами • Важно: актуальное расписание размещено в разделе
+          «Контакты/Запись»
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

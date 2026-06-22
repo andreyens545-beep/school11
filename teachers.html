@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Педагогический состав — МБОУ СОШ №11</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .news-ticker {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .news-ticker__track {
+        display: inline-block;
+        padding-left: 100%;
+        animation: ticker-move 18s linear infinite;
+      }
+      @keyframes ticker-move {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__inner">
+        <div class="header__logo-wrap">
+          <img src="logo.png" alt="Логотип МБОУ СОШ №11" class="header__logo" />
+        </div>
+        <div class="header__text">
+          <h1 class="header__title">МБОУ СОШ №11</h1>
+          <p class="header__subtitle">Основана в 1987 году. Традиции, знания, развитие.</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Главное меню">
+      <div class="container">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="about.html">О школе</a></li>
+          <li class="nav__item"><a class="nav__link" href="sections.html">Спортивные секции</a></li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="teachers.html" aria-current="page">Педагоги</a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты/Запись</a></li>
+          <li class="nav__item"><a class="nav__link" href="admin.html">Администратор</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="site-main">
+      <section class="page-teachers-intro" aria-labelledby="page-heading">
+        <div class="container">
+          <h1 id="page-heading" class="section-title page-teachers-intro__title">Педагогический состав</h1>
+        </div>
+      </section>
+
+      <section class="page-teachers" aria-labelledby="teachers-grid-heading">
+        <div class="container">
+          <h2 id="teachers-grid-heading" class="visually-hidden">Список педагогов</h2>
+          <div class="teachers-grid">
+            <article class="teacher-card">
+              <img class="teacher-photo teacher-photo--uniform" src="teacher_math.jpg"
+                onerror="this.onerror=null;this.src='https://randomuser.me/api/portraits/women/1.jpg';"
+                alt="Александрова Елена Михайловна" />
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Александрова Елена Михайловна</h3>
+                <p class="teacher-subject">Учитель математики</p>
+                <p class="teacher-desc">Почетный работник общего образования РФ, стаж 25 лет. Эксперт ЕГЭ.</p>
+                <button type="button" class="btn teacher-btn"
+                  data-teacher="Александрова Елена Михайловна" data-subject="Математика">
+                  Записаться на консультацию
+                </button>
+              </div>
+            </article>
+
+            <article class="teacher-card">
+              <img class="teacher-photo teacher-photo--uniform" src="teacher_russian.jpg"
+                onerror="this.onerror=null;this.src='https://randomuser.me/api/portraits/women/2.jpg';"
+                alt="Белова Ирина Сергеевна" />
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Белова Ирина Сергеевна</h3>
+                <p class="teacher-subject">Учитель русского языка и литературы</p>
+                <p class="teacher-desc">Кандидат педагогических наук, стаж 18 лет. Средний балл ЕГЭ — 89.</p>
+                <button type="button" class="btn teacher-btn"
+                  data-teacher="Белова Ирина Сергеевна" data-subject="Русский язык и литература">
+                  Записаться на консультацию
+                </button>
+              </div>
+            </article>
+
+            <article class="teacher-card">
+              <img class="teacher-photo teacher-photo--uniform" src="teacher_english.jpg"
+                onerror="this.onerror=null;this.src='https://randomuser.me/api/portraits/women/3.jpg';"
+                alt="Григорьева Мария Владимировна" />
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Григорьева Мария Владимировна</h3>
+                <p class="teacher-subject">Учитель иностранного языка</p>
+                <p class="teacher-desc">Сертификат CAE, стажировка в Великобритании. Средний балл ЕГЭ — 91.</p>
+                <button type="button" class="btn teacher-btn"
+                  data-teacher="Григорьева Мария Владимировна" data-subject="Иностранный язык">
+                  Записаться на консультацию
+                </button>
+              </div>
+            </article>
+
+            <article class="teacher-card">
+              <img class="teacher-photo teacher-photo--uniform" src="teacher_informatics.jpg"
+                onerror="this.onerror=null;this.src='https://randomuser.me/api/portraits/men/1.jpg';"
+                alt="Волков Дмитрий Андреевич" />
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Волков Дмитрий Андреевич</h3>
+                <p class="teacher-subject">Учитель информатики</p>
+                <p class="teacher-desc">Призер всероссийских конкурсов. Руководитель IT-клуба.</p>
+                <button type="button" class="btn teacher-btn"
+                  data-teacher="Волков Дмитрий Андреевич" data-subject="Информатика">
+                  Записаться на консультацию
+                </button>
+              </div>
+            </article>
+
+            <article class="teacher-card">
+              <img class="teacher-photo teacher-photo--uniform" src="teacher_history.jpg"
+                onerror="this.onerror=null;this.src='https://randomuser.me/api/portraits/men/2.jpg';"
+                alt="Дмитриев Сергей Петрович" />
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Дмитриев Сергей Петрович</h3>
+                <p class="teacher-subject">Учитель истории и обществознания</p>
+                <p class="teacher-desc">Заслуженный учитель школы РФ, стаж 30 лет.</p>
+                <button type="button" class="btn teacher-btn"
+                  data-teacher="Дмитриев Сергей Петрович" data-subject="История и обществознание">
+                  Записаться на консультацию
+                </button>
+              </div>
+            </article>
+
+            <article class="teacher-card">
+              <img class="teacher-photo teacher-photo--uniform" src="teacher_biology.jpg"
+                onerror="this.onerror=null;this.src='https://randomuser.me/api/portraits/women/4.jpg';"
+                alt="Егорова Анна Николаевна" />
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Егорова Анна Николаевна</h3>
+                <p class="teacher-subject">Учитель биологии и химии</p>
+                <p class="teacher-desc">Подготовка к олимпиадам. Победители регионального этапа 2024.</p>
+                <button type="button" class="btn teacher-btn"
+                  data-teacher="Егорова Анна Николаевна" data-subject="Биология и химия">
+                  Записаться на консультацию
+                </button>
+              </div>
+            </article>
+
+            <article class="teacher-card">
+              <img class="teacher-photo teacher-photo--uniform" src="teacher_primary.jpg"
+                onerror="this.onerror=null;this.src='https://randomuser.me/api/portraits/women/5.jpg';"
+                alt="Жукова Ольга Викторовна" />
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Жукова Ольга Викторовна</h3>
+                <p class="teacher-subject">Учитель начальных классов</p>
+                <p class="teacher-desc">Педагог высшей категории. Развивающее обучение.</p>
+                <button type="button" class="btn teacher-btn"
+                  data-teacher="Жукова Ольга Викторовна" data-subject="Начальные классы">
+                  Записаться на консультацию
+                </button>
+              </div>
+            </article>
+
+            <article class="teacher-card">
+              <img class="teacher-photo teacher-photo--uniform" src="teacher_physcult.jpg"
+                onerror="this.onerror=null;this.src='https://randomuser.me/api/portraits/men/3.jpg';"
+                alt="Зайцев Иван Алексеевич" />
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Зайцев Иван Алексеевич</h3>
+                <p class="teacher-subject">Учитель физической культуры</p>
+                <p class="teacher-desc">Мастер спорта по легкой атлетике. Организатор школьных спартакиад.</p>
+                <button type="button" class="btn teacher-btn"
+                  data-teacher="Зайцев Иван Алексеевич" data-subject="Физическая культура">
+                  Записаться на консультацию
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <aside class="teacher-stats" aria-labelledby="teacher-stats-heading">
+        <div class="container">
+          <h2 id="teacher-stats-heading" class="section-title">Статистика учителей</h2>
+          <div class="stats__grid">
+            <article class="stats-card">
+              <p class="stats-card__value">7</p>
+              <p class="stats-card__label">Почетных работников</p>
+            </article>
+            <article class="stats-card">
+              <p class="stats-card__value">2</p>
+              <p class="stats-card__label">Кандидата наук</p>
+            </article>
+            <article class="stats-card">
+              <p class="stats-card__value">20</p>
+              <p class="stats-card__label">Учителей высшей категории</p>
+            </article>
+            <article class="stats-card">
+              <p class="stats-card__value">100%</p>
+              <p class="stats-card__label">Укомплектованность штата</p>
+            </article>
+          </div>
+        </div>
+      </aside>
+
+      <section class="page-back" aria-label="Навигация по сайту">
+        <div class="container page-back__inner">
+          <a class="btn btn-back-home" href="index.html">Вернуться на главную</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <address class="footer__contacts">
+          <p class="footer__contact-item">Адрес: г. Белгород, ул. Школьная, д. 11</p>
+          <p class="footer__contact-item">Телефон: +7 (4722) 00-00-00</p>
+          <p class="footer__contact-item">Email: <a href="mailto:school11@beluo31.ru">school11@beluo31.ru</a></p>
+        </address>
+        <p class="footer__copyright">© МБОУ СОШ №11, 2026. Все права защищены.</p>
+      </div>
+      <div class="news-ticker" aria-label="Новости и объявления">
+        <p class="news-ticker__track">
+          Объявление: идет набор в спортивные секции на 2026-2027 учебный год • Новости: открыта запись
+          на консультации с педагогами • Важно: актуальное расписание размещено в разделе «Контакты/Запись»
+        </p>
+      </div>
+    </footer>
+
+    <!-- Модальное окно: запись на консультацию к педагогу -->
+    <div class="modal" id="teacherModal" aria-hidden="true" role="dialog" aria-labelledby="teacherModalTitle">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__dialog">
+        <button type="button" class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+        <h2 class="modal__title" id="teacherModalTitle">Запись на консультацию</h2>
+        <form id="teacherForm" class="modal-form" novalidate>
+          <div class="modal-form__group">
+            <label for="teacherStudentName">ФИО ученика <span class="required">*</span></label>
+            <input type="text" id="teacherStudentName" name="studentName" autocomplete="name" />
+            <span class="form-error" data-error-for="teacherStudentName"></span>
+          </div>
+          <div class="modal-form__group">
+            <label for="teacherStudentClass">Класс <span class="required">*</span></label>
+            <input type="text" id="teacherStudentClass" name="studentClass" placeholder="Например, 9А" />
+            <span class="form-error" data-error-for="teacherStudentClass"></span>
+          </div>
+          <div class="modal-form__group">
+            <label for="teacherPhone">Телефон <span class="required">*</span></label>
+            <input type="tel" id="teacherPhone" name="phone" autocomplete="tel" />
+            <span class="form-error" data-error-for="teacherPhone"></span>
+          </div>
+          <div class="modal-form__group">
+            <label for="teacherName">Выбранный педагог</label>
+            <input type="text" id="teacherName" name="teacher" readonly />
+          </div>
+          <div class="modal-form__group">
+            <label for="teacherSubject">Предмет</label>
+            <input type="text" id="teacherSubject" name="subject" readonly />
+          </div>
+          <fieldset class="modal-form__fieldset">
+            <legend>Тип занятия <span class="required">*</span></legend>
+            <ul class="modal-form__radios">
+              <li><input type="radio" id="lessonConsult" name="lessonType" value="consultation" /><label for="lessonConsult">Консультация</label></li>
+              <li><input type="radio" id="lessonExtra" name="lessonType" value="extra" /><label for="lessonExtra">Дополнительное занятие</label></li>
+              <li><input type="radio" id="lessonCompetition" name="lessonType" value="competition" /><label for="lessonCompetition">Подготовка к соревнованиям</label></li>
+              <li><input type="radio" id="lessonSport" name="lessonType" value="sport" /><label for="lessonSport">Спортивная подготовка</label></li>
+            </ul>
+            <span class="form-error" data-error-for="lessonType"></span>
+          </fieldset>
+          <div class="modal-form__row">
+            <div class="modal-form__group">
+              <label for="teacherDate">Желаемая дата <span class="required">*</span></label>
+              <input type="date" id="teacherDate" name="preferredDate" />
+              <span class="form-error" data-error-for="teacherDate"></span>
+            </div>
+            <div class="modal-form__group">
+              <label for="teacherTime">Желаемое время <span class="required">*</span></label>
+              <input type="time" id="teacherTime" name="preferredTime" />
+              <span class="form-error" data-error-for="teacherTime"></span>
+            </div>
+          </div>
+          <div class="modal-form__group">
+            <label for="teacherComment">Комментарий</label>
+            <textarea id="teacherComment" name="comment" rows="3"></textarea>
+          </div>
+          <p class="modal-form__message" id="teacherFormMessage" role="status"></p>
+          <div class="modal-form__actions">
+            <button type="submit" class="btn modal-form__submit">Отправить заявку</button>
+            <button type="button" class="btn modal-form__cancel" data-modal-close>Отмена</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+  </body>
+</html>

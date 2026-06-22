@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Спортивные секции — МБОУ СОШ №11</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .news-ticker { overflow: hidden; white-space: nowrap; }
+      .news-ticker__track {
+        display: inline-block;
+        padding-left: 100%;
+        animation: ticker-move 18s linear infinite;
+      }
+      @keyframes ticker-move {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__inner">
+        <div class="header__logo-wrap">
+          <img src="logo.png" alt="Логотип МБОУ СОШ №11" class="header__logo" />
+        </div>
+        <div class="header__text">
+          <h1 class="header__title">МБОУ СОШ №11</h1>
+          <p class="header__subtitle">Основана в 1987 году. Традиции, знания, развитие.</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Главное меню">
+      <div class="container">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="about.html">О школе</a></li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="sections.html" aria-current="page">Спортивные секции</a>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="teachers.html">Педагоги</a></li>
+          <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты/Запись</a></li>
+          <li class="nav__item"><a class="nav__link" href="admin.html">Администратор</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="site-main">
+      <section class="hero hero--compact"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('school_building.jpg');">
+        <div class="container hero__content">
+          <h1 class="hero__title">Спортивные секции</h1>
+          <p class="hero__subtitle">Выберите секцию и запишитесь онлайн — быстро и удобно</p>
+        </div>
+      </section>
+
+      <section class="sections-page" aria-labelledby="sections-heading">
+        <div class="container">
+          <h2 id="sections-heading" class="visually-hidden">Список спортивных секций</h2>
+          <div class="sections-grid">
+
+            <article class="section-card">
+              <img class="section-card__img" src="section_football.jpg" alt="Футбол"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=360&fit=crop';" />
+              <div class="section-card__body">
+                <h3 class="section-card__title">Футбол</h3>
+                <p class="section-card__desc">Командная игра, развитие выносливости, координации и тактического мышления. Тренировки под руководством опытного тренера.</p>
+                <ul class="section-card__meta">
+                  <li><strong>Возраст:</strong> 7–17 лет</li>
+                  <li><strong>Расписание:</strong> Вт, Чт 15:00–17:00</li>
+                  <li><strong>Мест:</strong> 20</li>
+                </ul>
+                <button type="button" class="btn section-btn" data-section="Футбол">Записаться</button>
+              </div>
+            </article>
+
+            <article class="section-card">
+              <img class="section-card__img" src="section_basketball.jpg" alt="Баскетбол"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=360&fit=crop';" />
+              <div class="section-card__body">
+                <h3 class="section-card__title">Баскетбол</h3>
+                <p class="section-card__desc">Развитие прыгучести, скорости и командного взаимодействия. Участие в школьных и городских турнирах.</p>
+                <ul class="section-card__meta">
+                  <li><strong>Возраст:</strong> 10–17 лет</li>
+                  <li><strong>Расписание:</strong> Пн, Ср 16:00–18:00</li>
+                  <li><strong>Мест:</strong> 15</li>
+                </ul>
+                <button type="button" class="btn section-btn" data-section="Баскетбол">Записаться</button>
+              </div>
+            </article>
+
+            <article class="section-card">
+              <img class="section-card__img" src="section_volleyball.jpg" alt="Волейбол"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=600&h=360&fit=crop';" />
+              <div class="section-card__body">
+                <h3 class="section-card__title">Волейбол</h3>
+                <p class="section-card__desc">Техника подачи, приёма и атаки. Формирование командного духа и физической подготовки.</p>
+                <ul class="section-card__meta">
+                  <li><strong>Возраст:</strong> 11–17 лет</li>
+                  <li><strong>Расписание:</strong> Ср, Пт 15:30–17:30</li>
+                  <li><strong>Мест:</strong> 16</li>
+                </ul>
+                <button type="button" class="btn section-btn" data-section="Волейбол">Записаться</button>
+              </div>
+            </article>
+
+            <article class="section-card">
+              <img class="section-card__img" src="section_athletics.jpg" alt="Лёгкая атлетика"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1461896836934-ffe607ad81f5?w=600&h=360&fit=crop';" />
+              <div class="section-card__body">
+                <h3 class="section-card__title">Лёгкая атлетика</h3>
+                <p class="section-card__desc">Бег, прыжки, метания. Подготовка к школьным спартакиадам и соревнованиям различного уровня.</p>
+                <ul class="section-card__meta">
+                  <li><strong>Возраст:</strong> 8–17 лет</li>
+                  <li><strong>Расписание:</strong> Пн–Пт 14:00–16:00</li>
+                  <li><strong>Мест:</strong> 25</li>
+                </ul>
+                <button type="button" class="btn section-btn" data-section="Лёгкая атлетика">Записаться</button>
+              </div>
+            </article>
+
+            <article class="section-card">
+              <img class="section-card__img" src="section_tennis.jpg" alt="Настольный теннис"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534156513286-4f7fc7fd0c8b?w=600&h=360&fit=crop';" />
+              <div class="section-card__body">
+                <h3 class="section-card__title">Настольный теннис</h3>
+                <p class="section-card__desc">Развитие реакции, точности и концентрации. Подходит для начинающих и продвинутых игроков.</p>
+                <ul class="section-card__meta">
+                  <li><strong>Возраст:</strong> 9–17 лет</li>
+                  <li><strong>Расписание:</strong> Вт, Чт 14:00–16:00</li>
+                  <li><strong>Мест:</strong> 12</li>
+                </ul>
+                <button type="button" class="btn section-btn" data-section="Настольный теннис">Записаться</button>
+              </div>
+            </article>
+
+            <article class="section-card">
+              <img class="section-card__img" src="section_ofp.jpg" alt="Общая физическая подготовка"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=360&fit=crop';" />
+              <div class="section-card__body">
+                <h3 class="section-card__title">Общая физическая подготовка</h3>
+                <p class="section-card__desc">Комплексные тренировки для укрепления здоровья, развития силы, гибкости и выносливости у младших школьников.</p>
+                <ul class="section-card__meta">
+                  <li><strong>Возраст:</strong> 7–14 лет</li>
+                  <li><strong>Расписание:</strong> Сб 10:00–12:00</li>
+                  <li><strong>Мест:</strong> 18</li>
+                </ul>
+                <button type="button" class="btn section-btn" data-section="Общая физическая подготовка">Записаться</button>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="page-back" aria-label="Навигация по сайту">
+        <div class="container page-back__inner">
+          <a class="btn btn-back-home" href="index.html">Вернуться на главную</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <address class="footer__contacts">
+          <p class="footer__contact-item">Адрес: г. Белгород, ул. Школьная, д. 11</p>
+          <p class="footer__contact-item">Телефон: +7 (4722) 00-00-00</p>
+          <p class="footer__contact-item">Email: <a href="mailto:school11@beluo31.ru">school11@beluo31.ru</a></p>
+        </address>
+        <p class="footer__copyright">© МБОУ СОШ №11, 2026. Все права защищены.</p>
+      </div>
+      <div class="news-ticker" aria-label="Новости и объявления">
+        <p class="news-ticker__track">
+          Объявление: идет набор в спортивные секции на 2026-2027 учебный год • Новости: открыта запись
+          на консультации с педагогами • Важно: актуальное расписание размещено в разделе «Контакты/Запись»
+        </p>
+      </div>
+    </footer>
+
+    <!-- Модальное окно: запись на спортивную секцию -->
+    <div class="modal" id="sectionModal" aria-hidden="true" role="dialog" aria-labelledby="sectionModalTitle">
+      <div class="modal__overlay" data-modal-close></div>
+      <div class="modal__dialog">
+        <button type="button" class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+        <h2 class="modal__title" id="sectionModalTitle">Запись на спортивную секцию</h2>
+        <form id="sectionForm" class="modal-form" novalidate>
+          <div class="modal-form__group">
+            <label for="sectionStudentName">ФИО ученика <span class="required">*</span></label>
+            <input type="text" id="sectionStudentName" name="studentName" autocomplete="name" />
+            <span class="form-error" data-error-for="sectionStudentName"></span>
+          </div>
+          <div class="modal-form__row">
+            <div class="modal-form__group">
+              <label for="sectionStudentClass">Класс <span class="required">*</span></label>
+              <input type="text" id="sectionStudentClass" name="studentClass" placeholder="Например, 5Б" />
+              <span class="form-error" data-error-for="sectionStudentClass"></span>
+            </div>
+            <div class="modal-form__group">
+              <label for="sectionStudentAge">Возраст <span class="required">*</span></label>
+              <input type="number" id="sectionStudentAge" name="studentAge" min="6" max="18" />
+              <span class="form-error" data-error-for="sectionStudentAge"></span>
+            </div>
+          </div>
+          <div class="modal-form__group">
+            <label for="sectionParentName">ФИО родителя <span class="required">*</span></label>
+            <input type="text" id="sectionParentName" name="parentName" autocomplete="name" />
+            <span class="form-error" data-error-for="sectionParentName"></span>
+          </div>
+          <div class="modal-form__row">
+            <div class="modal-form__group">
+              <label for="sectionPhone">Телефон <span class="required">*</span></label>
+              <input type="tel" id="sectionPhone" name="phone" autocomplete="tel" />
+              <span class="form-error" data-error-for="sectionPhone"></span>
+            </div>
+            <div class="modal-form__group">
+              <label for="sectionEmail">Email <span class="required">*</span></label>
+              <input type="email" id="sectionEmail" name="email" autocomplete="email" />
+              <span class="form-error" data-error-for="sectionEmail"></span>
+            </div>
+          </div>
+          <div class="modal-form__group">
+            <label for="sectionName">Название секции</label>
+            <input type="text" id="sectionName" name="section" readonly />
+          </div>
+          <div class="modal-form__group">
+            <label for="sectionPreferredTime">Удобное время занятий <span class="required">*</span></label>
+            <select id="sectionPreferredTime" name="preferredTime">
+              <option value="">Выберите вариант</option>
+              <option value="weekday-morning">Будни, до 14:00</option>
+              <option value="weekday-afternoon">Будни, после 14:00</option>
+              <option value="saturday">Суббота</option>
+              <option value="flex">Согласовать с тренером</option>
+            </select>
+            <span class="form-error" data-error-for="sectionPreferredTime"></span>
+          </div>
+          <div class="modal-form__group">
+            <label for="sectionComment">Комментарий</label>
+            <textarea id="sectionComment" name="comment" rows="3"></textarea>
+          </div>
+          <p class="modal-form__message" id="sectionFormMessage" role="status"></p>
+          <div class="modal-form__actions">
+            <button type="submit" class="btn modal-form__submit">Отправить заявку</button>
+            <button type="button" class="btn modal-form__cancel" data-modal-close>Отмена</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+  </body>
+</html>
